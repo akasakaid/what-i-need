@@ -1,5 +1,6 @@
 from os import popen,system
 from time import sleep
+from sys import exit
 
 zenmate = 'https://chrome.google.com/webstore/detail/zenmate-free-vpn%E2%80%93best-vpn/fdcgdnkidjaadafnichfpabhfomcebme?hl=en'
 autorefresh = 'https://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm?hl=en'
@@ -28,3 +29,9 @@ def main():
 		for i in range(start,end+1):
 			nameapp = 'chrome-' + str(i).zfill(3)
 			startup(nameapp,autorefresh)
+
+if __name__ == "__main__":
+    try:
+        main()
+    except KeyboardInterrupt:
+        exit()
