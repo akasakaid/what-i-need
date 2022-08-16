@@ -4,6 +4,11 @@ from sys import exit
 
 zenmate = 'https://chrome.google.com/webstore/detail/zenmate-free-vpn%E2%80%93best-vpn/fdcgdnkidjaadafnichfpabhfomcebme?hl=en'
 autorefresh = 'https://chrome.google.com/webstore/detail/auto-refresh-plus-page-mo/hgeljhfekpckiiplhkigfehkdpldcggm?hl=en'
+hoxxvpn = 'https://chrome.google.com/webstore/detail/hoxx-vpn-proxy/nbcojefnccbanplpoffopkoepjmhgdgh'
+useragent = 'https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg'
+spooftime = 'https://chrome.google.com/webstore/detail/spoof-timezone/kcabmhnajflfolhelachlflngdbfhboe'
+
+
 list_ma_url = ['https://youtu.be/VyGnVrbZXgY','https://youtu.be/5Ucr4pcvWME','https://youtu.be/vUCy7aohKaU','https://youtu.be/pFLGtsoeXaE','https://youtu.be/AJaJWF3IUSA','https://youtu.be/sqol483YaUc']
 
 def startup(name,app=None):
@@ -19,9 +24,14 @@ def startup(name,app=None):
 def main():
 	system('cls')
 	print('- menu ')
-	print('0. start all chrome')
-	print('1. install zenmate')
-	print('2. install auto refresh ')
+	print("""
+0. start chrome 
+1. install zenmate vpn
+2. install autorefresh plus
+3. install hoxx vpn
+4. install user agent switcher
+5. install spoofing time
+		""")
 	print()
 	choice = int(input('-> input number : '))
 	if choice == 0:
@@ -44,19 +54,27 @@ def main():
 		for i in range(start,end+1):
 			nameapp = 'chrome-' + str(i).zfill(3)
 			startup(nameapp,autorefresh)
-<<<<<<< HEAD
+	elif choice == 3:
+		start = int(input('- start : '))
+		end = int(input('- end : '))
+		for i in range(start,end+1):
+			nameapp = 'chrome-' + str(i).zfill(3)
+			startup(nameapp,hoxxvpn)
+	elif choice == 4:
+		start = int(input('- start : '))
+		end = int(input('- end : '))
+		for i in range(start,end+1):
+			nameapp = 'chrome-' + str(i).zfill(3)
+			startup(nameapp,useragent)
+	elif choice == 5:
+		start = int(input('- start : '))
+		end = int(input('- end : '))
+		for i in range(start,end+1):
+			nameapp = 'chrome-' + str(i).zfill(3)
+			startup(nameapp,spooftime)
 
 if __name__ == "__main__":
     try:
         main()
     except KeyboardInterrupt:
         exit()
-=======
-			sleep(5)
-
-if __name__ == '__main__':
-	try:
-		main()
-	except KeyboardInterrupt:
-		exit()
->>>>>>> 947000fbaaac2b79dabfda258350da97f160ad89
