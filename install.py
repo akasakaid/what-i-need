@@ -40,38 +40,42 @@ def main():
 		for i in range(start,end+1):
 			nameapp = 'chrome-' + str(i).zfill(3)
 			startup(nameapp)
-			sleep(5)
+			sleep(3)
 	if choice == 1:
 		start = int(input('- start : '))
 		end = int(input('- end : '))
 		for i in range(start,end+1):
 			nameapp = 'chrome-' + str(i).zfill(3)
 			startup(nameapp,zenmate)
-			sleep(5)
+			sleep(3)
 	elif choice == 2:
 		start = int(input('- start : '))
 		end = int(input('- end : '))
 		for i in range(start,end+1):
 			nameapp = 'chrome-' + str(i).zfill(3)
 			startup(nameapp,autorefresh)
+			sleep(3)
 	elif choice == 3:
 		start = int(input('- start : '))
 		end = int(input('- end : '))
 		for i in range(start,end+1):
 			nameapp = 'chrome-' + str(i).zfill(3)
 			startup(nameapp,hoxxvpn)
+			sleep(3)
 	elif choice == 4:
 		start = int(input('- start : '))
 		end = int(input('- end : '))
 		for i in range(start,end+1):
 			nameapp = 'chrome-' + str(i).zfill(3)
 			startup(nameapp,useragent)
+			sleep(3)
 	elif choice == 5:
 		start = int(input('- start : '))
 		end = int(input('- end : '))
 		for i in range(start,end+1):
 			nameapp = 'chrome-' + str(i).zfill(3)
 			startup(nameapp,spooftime)
+			sleep(3)
 
 if __name__ == "__main__":
     try:
