@@ -8,6 +8,7 @@ hoxxvpn = 'https://chrome.google.com/webstore/detail/hoxx-vpn-proxy/nbcojefnccba
 useragent = 'https://chrome.google.com/webstore/detail/user-agent-switcher-and-m/bhchdcejhohfmigjafbampogmaanbfkg'
 spooftime = 'https://chrome.google.com/webstore/detail/spoof-timezone/kcabmhnajflfolhelachlflngdbfhboe'
 skipads = 'https://chrome.google.com/webstore/detail/youtube-video-skip-ad-tri/hpnelpabemhjfjgiibgkliipaehnfcjk?hl=id'
+erase = 'https://chrome.google.com/webstore/detail/hdgnienkeomlaeeojaibeicglpoaadnj'
 
 
 list_ma_url = ['https://youtu.be/VyGnVrbZXgY', 'https://youtu.be/5Ucr4pcvWME', 'https://youtu.be/vUCy7aohKaU',
@@ -36,6 +37,7 @@ def main():
 4. install user agent switcher
 5. install spoofing time
 6. install skipper ads
+7. install erase data
 		""")
     print()
     choice = int(input('-> input number : '))
@@ -87,6 +89,13 @@ def main():
         for i in range(start, end+1):
             nameapp = 'chrome-' + str(i).zfill(3)
             startup(nameapp, skipads)
+            sleep(3)
+    elif choice == 7:
+        start = int(input('- start : '))
+        end = int(input('- end : '))
+        for i in range(start, end+1):
+            nameapp = 'chrome-' + str(i).zfill(3)
+            startup(nameapp, erase)
             sleep(3)
 
 
